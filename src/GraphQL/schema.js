@@ -7,6 +7,7 @@ const { gallery } = require('./Queries/galleryQueries');
 const { createService, updateService, deleteService } = require('./Mutations/serviceMutations');
 const { createBooking, updateBookingStatus, cancelBooking } = require('./Mutations/bookingMutations');
 const { addGalleryItem, updateGalleryItem, deleteGalleryItem } = require('./Mutations/galleryMutations');
+const { pesapalBookingRequest } = require('./Mutations/pesapalMutations');
 
 const RootQuery = new GraphQLObjectType({
     name: 'Query',
@@ -33,6 +34,7 @@ const RootMutation = new GraphQLObjectType({
         addGalleryItem,
         updateGalleryItem,
         deleteGalleryItem,
+        pesapalBookingRequest,
     },
 });
 
